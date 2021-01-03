@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Favorite color select webpage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function selectedColor(color_name) {
+            if($("#user_name").val().length == 0){
+                alert("이름을 입력하세요");
+            }else{
+                var url = 'http://localhost:8080/api/select?color='+color_name+'&user='+ $("#user_name").val();
+                $.get(url)
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="width:100%; height:50%;">
+        <h1>이름을 입력하세요.</h1>
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name">
+        <h1>마음에 드는 색상을 고르세요.</h1>
+        <ul>
+            <li><button type="button" onclick="selectedColor('red')">red</button></li>
+            <li><button type="button" onclick="selectedColor('yellow')">yellow</button></li>
+            <li><button type="button" onclick="selectedColor('green')">green</button></li>
+            <li><button type="button" onclick="selectedColor('blue')">blue</button></li>
+        </ul>
+    </div>
+</body>
+</html>

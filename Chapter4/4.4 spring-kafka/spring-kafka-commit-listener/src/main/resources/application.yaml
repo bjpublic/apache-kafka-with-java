@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: my-kafka:9092
+    listener:
+      type: BATCH
+      ack-mode: MANUAL_IMMEDIATE

@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.kafka:spring-kafka:2.5.10.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter:2.4.0'
+}

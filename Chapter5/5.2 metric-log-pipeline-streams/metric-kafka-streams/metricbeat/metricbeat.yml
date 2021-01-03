@@ -1,0 +1,12 @@
+metricbeat.modules:
+- module: system
+  metricsets:
+    - cpu
+    - memory
+  enabled: true
+  period: 10s
+  processes: ['.*']
+
+output.kafka:
+  hosts: ["my-kafka:9092"]
+  topic: 'test'

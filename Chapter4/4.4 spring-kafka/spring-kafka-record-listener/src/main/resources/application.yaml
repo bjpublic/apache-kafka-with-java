@@ -1,0 +1,4 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: my-kafka:9092
