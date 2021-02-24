@@ -1,6 +1,6 @@
-package com.pipline;
+package com.pipeline;
 
-import com.pipline.consumer.ConsumerWorker;
+import com.pipeline.consumer.ConsumerWorker;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.pipline.consumer;
+package com.pipeline.consumer;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.conf.Configuration;
@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ConsumerWorker implements Runnable {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(ConsumerWorker.class);
     private static Map<Integer, List<String>> bufferString = new ConcurrentHashMap<>();
     private static Map<Integer, Long> currentFileOffset = new ConcurrentHashMap<>();
 
