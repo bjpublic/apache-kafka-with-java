@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class ElasticSearchSinkConnector extends SinkConnector {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(ElasticSearchSinkConnector.class);
 
     private Map<String, String> configProperties;
 

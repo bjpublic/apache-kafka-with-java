@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class SingleFileSinkConnector extends SinkConnector {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(SingleFileSinkConnector.class);
 
     private Map<String, String> configProperties;
 

@@ -16,7 +16,7 @@ import java.util.Date;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProduceController {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(ProduceController.class);
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 

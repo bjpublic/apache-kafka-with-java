@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class SingleFileSourceConnector extends SourceConnector {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(SingleFileSourceConnector.class);
 
     private Map<String, String> configProperties;
 

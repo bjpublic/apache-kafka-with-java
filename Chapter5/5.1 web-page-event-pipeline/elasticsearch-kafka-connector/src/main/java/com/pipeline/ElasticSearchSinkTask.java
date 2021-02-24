@@ -25,7 +25,7 @@ import java.util.Collection;
 import java.util.Map;
 
 public class ElasticSearchSinkTask extends SinkTask {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(ElasticSearchSinkTask.class);
 
 
     private ElasticSearchSinkConnectorConfig config;
