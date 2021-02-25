@@ -68,5 +68,5 @@ public class KStreamJoinGlobalKTable {
 //        cup send to Newyork
 //        cup send to Newyork
 //        cup send to Newyork
-//        iPhone send to Pusan
+//        iPhone send to Busan
 //
