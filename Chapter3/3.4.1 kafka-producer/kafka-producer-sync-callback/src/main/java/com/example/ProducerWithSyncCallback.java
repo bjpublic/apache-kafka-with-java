@@ -25,7 +25,7 @@ public class ProducerWithSyncCallback {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
-        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pankyo", "23");
+        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pangyo", "23");
         try {
             RecordMetadata metadata = producer.send(record).get();
             logger.info(metadata.toString());
