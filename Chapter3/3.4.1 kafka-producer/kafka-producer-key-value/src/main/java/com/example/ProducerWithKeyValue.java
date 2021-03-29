@@ -24,7 +24,7 @@ public class ProducerWithKeyValue {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
-        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pankyo", "23");
+        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pangyo", "23");
         producer.send(record);
         ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Busan", "21");
         producer.send(record);
