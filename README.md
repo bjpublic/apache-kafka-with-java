@@ -24,8 +24,8 @@
 
 - 현) 카카오, 광고추천데이터플랫폼파트
 - 전) SK플래닛, DataInfrastructure팀
-- 개발 블로그 https://blog.voidmainvoid.net
-- 개발 유튜브 https://bit.ly/devwonyoung
+- [개발 블로그](https://blog.voidmainvoid.net)
+- [개발 유튜브](https://bit.ly/devwonyoung)
 
 
 ## 출판사 리뷰
