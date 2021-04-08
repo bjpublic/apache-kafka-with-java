@@ -5,7 +5,7 @@
 ## 구매 링크
 
 - [yes24](http://www.yes24.com/Product/Goods/99122569)
-- [교보문고](https://bit.ly/39Pk0Ak)
+- [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791165920548&orderClick=LET&Kc=)
 - [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268985828)
 
 
@@ -39,7 +39,7 @@
 
 거스를 수 없는 빅데이터 시대의 흐름을 따르고 싶다면, 그 시대 안에서 대용량 데이터를 더욱 안전하고 효율적으로 다루고 싶다면 이 책이 그 길을 제시할 것이다. 이 책과 함께 개발자로서의 커리어를 한층 더 업그레이드하길 바란다.
 
-## 저자 소개
+## 이 책의 주요 내용
 - 미러메이커2
 - 카프카 커넥트
 - 카프카 명령어
@@ -48,7 +48,7 @@
 - 클라우드 카프카(Confluent Cloud, AWS MSK)
 - 스프링 카프카
 
-## 저자 소개
+## 이 책의 구성
 이 책은 아파치 카프카 기반의 대규모 데이터 파이프라인을 유연하고 안전하게 운영하기 위한 방안에 초점을 맞추었다.
 
 [1장]은 카프카의 탄생 배경과 특징을 다루고, 카프카가 미래의 빅데이터 아키텍처에서 어떤 모습으로 변화할지 설명한다.
