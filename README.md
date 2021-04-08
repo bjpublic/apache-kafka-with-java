@@ -4,10 +4,10 @@
 ## 구매 링크
 
 - [yes24] http://www.yes24.com/Product/Goods/99122569
-- [교보문고] http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791165920548&orderClick=LET&Kc=
+- [교보문고] https://bit.ly/39Pk0Ak
 - [알라딘] https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268985828
 
-![아파치카프카 표1](https://user-images.githubusercontent.com/21074282/113962083-056a4680-9862-11eb-882c-0f0c68ce67cf.jpg)
+![입체 표지](https://user-images.githubusercontent.com/21074282/113962307-63972980-9862-11eb-8c25-ac168eff08ab.png)
 
 ## 책 소개
 > 아파치 카프카 애플리케이션 개발을 위한 「실전 가이드」
