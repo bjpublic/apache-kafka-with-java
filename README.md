@@ -5,7 +5,7 @@
 ## 구매 링크
 
 - [yes24](http://www.yes24.com/Product/Goods/99122569)
-- [교보문고]((https://bit.ly/39Pk0Ak)
+- [교보문고](https://bit.ly/39Pk0Ak)
 - [알라딘](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268985828)
 
 
