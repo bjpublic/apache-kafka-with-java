@@ -7,7 +7,7 @@
 - [교보문고] http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791165920548&orderClick=LET&Kc=
 - [알라딘] https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268985828
 
-
+![아파치카프카 표1](https://user-images.githubusercontent.com/21074282/113962083-056a4680-9862-11eb-882c-0f0c68ce67cf.jpg)
 
 ## 책 소개
 > 아파치 카프카 애플리케이션 개발을 위한 「실전 가이드」
@@ -16,6 +16,7 @@
 
 ## 저자 소개_최원영
 > 개발 블로그 https://blog.voidmainvoid.net
+
 > 개발 유튜브 https://bit.ly/devwonyoung
 
 궁금증과 도전 그리고 공유를 모토로 삼고 있다. SK플래닛을 첫 회사로 입사하고 이후, 11번가 커머스 백엔드, 프론트엔드, 플랫폼 그리고 배포와 같이 다양한 업무를 수행하면서 다방면으로 개발 역량을 쌓아왔다. 단순히 요구사항을 구현하는 데에 집중하는 것이 아닌 고객이 만족하는 서비스를 개발하기 위해 노력하고 있다. Data Infrastructure 팀에서 100개 이상의 데이터 파이프라인을 개발하고 운영하는 데이터 엔지니어로서 카프카 관련 역량을 쌓았다. 항상 새로운 것에 호기심이 많으며 적극적으로 탐구하는 개발자로 지내고 있으며, 습득한 지식을 지속적으로 사내외로 공유하고자 노력한다. 지금은 카카오에서 새로운 도전을 시작하고 있다.
@@ -34,4 +35,6 @@
 
 거스를 수 없는 빅데이터 시대의 흐름을 따르고 싶다면, 그 시대 안에서 대용량 데이터를 더욱 안전하고 효율적으로 다루고 싶다면 이 책이 그 길을 제시할 것이다. 이 책과 함께 개발자로서의 커리어를 한층 더 업그레이드하길 바란다.
 
+
+![기본 1080px](https://user-images.githubusercontent.com/21074282/113962242-3fd3e380-9862-11eb-8c7b-8d5f0c599d4a.jpg)
 
