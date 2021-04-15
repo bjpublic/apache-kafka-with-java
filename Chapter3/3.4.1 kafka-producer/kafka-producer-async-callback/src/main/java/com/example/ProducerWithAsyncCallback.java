@@ -1,6 +1,5 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
