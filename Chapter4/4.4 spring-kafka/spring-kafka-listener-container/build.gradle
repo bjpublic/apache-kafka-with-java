@@ -10,6 +10,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.kafka:spring-kafka:2.5.10.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter:2.4.0'
+    implementation 'org.springframework.kafka:spring-kafka:2.5.10.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter:2.4.0'
 }

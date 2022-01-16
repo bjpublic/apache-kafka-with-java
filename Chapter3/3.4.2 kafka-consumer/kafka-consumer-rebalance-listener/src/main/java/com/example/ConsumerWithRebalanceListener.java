@@ -25,7 +25,6 @@ public class ConsumerWithRebalanceListener {
         configs.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);
         configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        configs.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
 
         consumer = new KafkaConsumer<>(configs);
         consumer.subscribe(Arrays.asList(TOPIC_NAME), new RebalanceListener());
@@ -33,21 +32,7 @@ public class ConsumerWithRebalanceListener {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofSeconds(1));
             for (ConsumerRecord<String, String> record : records) {
                 logger.info("{}", record);
-                currentOffsets.put(new TopicPartition(record.topic(), record.partition()),
-                        new OffsetAndMetadata(record.offset() + 1, null));
-                consumer.commitSync(currentOffsets);
             }
-        }
-    }
-
-    private static class RebalanceListener implements ConsumerRebalanceListener {
-        public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
-            logger.warn("Partitions are assigned");
-
-        }
-        public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
-            logger.warn("Partitions are revoked");
-            consumer.commitSync(currentOffsets);
         }
     }
 }

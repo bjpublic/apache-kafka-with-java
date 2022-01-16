@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.kafka:spring-kafka:2.5.10.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
-    compile 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.springframework.kafka:spring-kafka:2.5.10.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+    implementation 'com.google.code.gson:gson:2.8.6'
 }

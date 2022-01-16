@@ -1,6 +1,5 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
