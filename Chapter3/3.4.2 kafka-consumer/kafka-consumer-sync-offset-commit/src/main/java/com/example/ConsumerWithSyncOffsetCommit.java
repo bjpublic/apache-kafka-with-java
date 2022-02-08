@@ -1,6 +1,5 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;

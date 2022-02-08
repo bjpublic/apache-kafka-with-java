@@ -1,6 +1,5 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.errors.WakeupException;
@@ -10,8 +9,6 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 public class ConsumerWithSyncOffsetCommit {
@@ -40,10 +37,12 @@ public class ConsumerWithSyncOffsetCommit {
                 for (ConsumerRecord<String, String> record : records) {
                     logger.info("{}", record);
                 }
+                consumer.commitSync();
             }
         } catch (WakeupException e) {
             logger.warn("Wakeup consumer");
         } finally {
+            logger.warn("Consumer close");
             consumer.close();
         }
     }

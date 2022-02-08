@@ -30,8 +30,11 @@ public class TransactionProducer {
         producer.send(record);
         logger.info("{}", record);
         producer.flush();
+
+
         producer.commitTransaction();
-        // producer.abortTransaction();
+        //producer.abortTransaction();
+
         producer.close();
     }
 }

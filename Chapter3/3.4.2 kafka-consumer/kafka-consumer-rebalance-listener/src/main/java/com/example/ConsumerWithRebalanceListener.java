@@ -1,7 +1,6 @@
 package com.example;
 
 import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +16,6 @@ public class ConsumerWithRebalanceListener {
 
 
     private static KafkaConsumer<String, String> consumer;
-    private static Map<TopicPartition, OffsetAndMetadata> currentOffsets = new HashMap();
 
     public static void main(String[] args) {
         Properties configs = new Properties();
