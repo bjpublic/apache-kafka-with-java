@@ -1,17 +1,12 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Properties;
 
 public class ProducerWithKeyValue {
-    private final static Logger logger = LoggerFactory.getLogger(ProducerWithKeyValue.class);
     private final static String TOPIC_NAME = "test";
     private final static String BOOTSTRAP_SERVERS = "my-kafka:9092";
 
@@ -24,10 +19,10 @@ public class ProducerWithKeyValue {
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
-        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pangyo", "23");
+        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Pangyo", "Pangyo");
         producer.send(record);
-        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, "Busan", "21");
-        producer.send(record);
+        ProducerRecord<String, String> record2 = new ProducerRecord<>(TOPIC_NAME, "Busan", "Busan");
+        producer.send(record2);
         producer.flush();
         producer.close();
     }

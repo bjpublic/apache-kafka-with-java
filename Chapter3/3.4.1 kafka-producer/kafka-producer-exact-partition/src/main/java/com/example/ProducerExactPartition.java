@@ -1,17 +1,12 @@
 package com.example;
 
-import com.google.gson.Gson;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Properties;
 
-public class ProducerExactParition {
-    private final static Logger logger = LoggerFactory.getLogger(ProducerExactParition.class);
+public class ProducerExactPartition {
     private final static String TOPIC_NAME = "test";
     private final static String BOOTSTRAP_SERVERS = "my-kafka:9092";
 
@@ -25,7 +20,7 @@ public class ProducerExactParition {
         KafkaProducer<String, String> producer = new KafkaProducer<>(configs);
 
         int partitionNo = 0;
-        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, partitionNo, "Pangyo", "23");
+        ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, partitionNo, "Pangyo", "Pangyo");
         producer.send(record);
 
         producer.flush();
