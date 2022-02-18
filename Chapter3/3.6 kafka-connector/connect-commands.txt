@@ -1,0 +1,60 @@
+# 커넥터 플러그인 조회
+$ curl -X GET http://localhost:8083/connector-plugins
+
+# FileStreamSinkConnector 생성
+
+$ curl -X POST \
+  http://localhost:8083/connectors \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "file-sink-test",
+    "config":
+    {
+	    "topics":"test",
+	    "connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector",
+	    "tasks.max":1,
+	    "file":"/tmp/connect-test.txt"
+    }
+  }'
+
+# file-sink-test 커넥터 실행 상태 확인
+$ curl http://localhost:8083/connectors/file-sink-test/status
+
+# file-sink-test 커넥터의 태스크 확인
+$ curl http://localhost:8083/connectors/file-sink-test/tasks
+
+# file-sink-test 커넥터 특정 태스크 상태 확인
+$ curl http://localhost:8083/connectors/file-sink-test/tasks/0/status
+
+# file-sink-test 커넥터 특정 태스크 재시작
+$ curl -X POST http://localhost:8083/connectors/file-sink-test/tasks/0/restart
+
+# file-sink-test 커넥터 수정
+$ curl -X PUT http://localhost:8083/connectors/file-sink-test/config \
+  -H 'Content-Type: application/json' \
+  -d '{
+	    "topics":"test",
+	    "connector.class":"org.apache.kafka.connect.file.FileStreamSinkConnector",
+	    "tasks.max":1,
+	    "file":"/tmp/connect-test2.txt"
+	}'
+
+# file-sink-test 커넥터 중지
+$ curl -X PUT http://localhost:8083/connectors/file-sink-test/pause
+
+# file-sink-test 커넥터 시작
+$ curl -X PUT http://localhost:8083/connectors/file-sink-test/resume
+
+# file-sink-test 커넥터 재시작
+$ curl -X POST http://localhost:8083/connectors/file-sink-test/restart
+
+# file-sink-test 커넥터 삭제
+$ curl -X DELETE http://localhost:8083/connectors/file-sink-test
+
+# mac에서 내 ip 확인
+$ ifconfig | grep "inet " | awk '{ print $2}'
+
+# kafka-connect-ui 도커 실행
+$ docker run --rm -it -p 8000:8000 \
+           -e "CONNECT_URL=http://{{my-ip}}:8083" \
+           landoop/kafka-connect-ui
