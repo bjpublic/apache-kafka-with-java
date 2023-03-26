@@ -1,5 +1,0 @@
-spring:
-  kafka:
-    bootstrap-servers: my-kafka:9092
-    consumer:
-      group-id: myGroup
