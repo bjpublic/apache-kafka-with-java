@@ -5,11 +5,14 @@ plugins {
 group 'com.example'
 version '1.0'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.apache.kafka:kafka-clients:2.5.0'
-    compile  'org.slf4j:slf4j-simple:1.7.30'
+    implementation  'org.slf4j:slf4j-simple:1.7.30'
 }
