@@ -13,6 +13,6 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.apache.kafka', name: 'kafka-streams', version: '2.6.0'
+    implementation 'org.apache.kafka:kafka-clients:2.5.0'
     implementation 'org.slf4j:slf4j-simple:1.7.30'
 }
