@@ -39,20 +39,20 @@ public class KStreamJoinKTable {
 }
 //
 //
-//./kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address --property "parse.key=true" --property "key.separator=:"
-//        >wonyoung:Seoul
-//        >somin:Newyork
-//        >wonyoung:Seoul
-//        >somin:Newyork
+// $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address --property "parse.key=true" --property "key.separator=:"
+// >wonyoung:Seoul
+// >somin:Newyork
+// >wonyoung:Seoul
+// >somin:Newyork
 //
-//        ./kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic order --property "parse.key=true" --property "key.separator=:"
-//        >somin:cup
-//        >somin:cup
-//        >wonyoung:iPhone
+// $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic order --property "parse.key=true" --property "key.separator=:"
+// >somin:cup
+// >somin:cup
+// >wonyoung:iPhone
 //
-//        ./kafka-console-consumer.sh --bootstrap-server my-kafka:9092 --topic order_join --from-beginning
-//        cup send to Newyork
-//        cup send to Newyork
-//        cup send to Newyork
-//        iPhone send to Busan
+// $ bin/kafka-console-consumer.sh --bootstrap-server my-kafka:9092 --topic order_join --from-beginning
+// cup send to Newyork
+// cup send to Newyork
+// cup send to Newyork
+// iPhone send to Busan
 //

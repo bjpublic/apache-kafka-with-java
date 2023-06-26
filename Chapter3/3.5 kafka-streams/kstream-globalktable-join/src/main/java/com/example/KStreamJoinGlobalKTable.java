@@ -30,8 +30,8 @@ public class KStreamJoinGlobalKTable {
         KStream<String, String> orderStream = builder.stream(ORDER_STREAM);
 
         orderStream.join(addressGlobalTable,
-                (orderKey, orderValue) -> orderKey,
-                (order, address) -> order + " send to " + address)
+                        (orderKey, orderValue) -> orderKey,
+                        (order, address) -> order + " send to " + address)
                 .to(ORDER_JOIN_STREAM);
 
         KafkaStreams streams;
@@ -42,31 +42,27 @@ public class KStreamJoinGlobalKTable {
 }
 
 //
-// ./kafka-topics.sh --bootstrap-server my-kafka:9092 --create --partitions 2 --topic address_v2
-//         WARNING: Due to limitations in metric names, topics with a period ('.') or underscore ('_') could collide. To avoid issues it is best to use either, but not both.
-//         Created topic address_v2.
+// $ bin/kafka-topics.sh --bootstrap-server my-kafka:9092 --create --partitions 2 --topic address_v2
+// WARNING: Due to limitations in metric names, topics with a period ('.') or underscore ('_') could collide. To avoid issues it is best to use either, but not both.
+// Created topic address_v2.
+//
+// $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address_v2 --property "parse.key=true" --property "key.separator=:"
+// >wonyoung:Jeju
 //
 //
+// $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address --property "parse.key=true" --property "key.separator=:"
+// >wonyoung:Seoul
+// >somin:Newyork
+// >wonyoung:Seoul
+// >somin:Newyork
 //
-//        ./kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address_v2 --property "parse.key=true" --property "key.separator=:"
-//        >wonyoung:Jeju
-
+// $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic order --property "parse.key=true" --property "key.separator=:"
+// >somin:cup
+// >somin:cup
+// >wonyoung:iPhone
 //
-//
-//./kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address --property "parse.key=true" --property "key.separator=:"
-//        >wonyoung:Seoul
-//        >somin:Newyork
-//        >wonyoung:Seoul
-//        >somin:Newyork
-//
-//        ./kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic order --property "parse.key=true" --property "key.separator=:"
-//        >somin:cup
-//        >somin:cup
-//        >wonyoung:iPhone
-//
-//        ./kafka-console-consumer.sh --bootstrap-server my-kafka:9092 --topic order_join --from-beginning
-//        cup send to Newyork
-//        cup send to Newyork
-//        cup send to Newyork
-//        iPhone send to Busan
-//
+// $ bin/kafka-console-consumer.sh --bootstrap-server my-kafka:9092 --topic order_join --from-beginning
+// cup send to Newyork
+// cup send to Newyork
+// cup send to Newyork
+// iPhone send to Busan

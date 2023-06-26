@@ -64,7 +64,7 @@ public class QueryableStore {
 }
 
 // $ bin/kafka-console-producer.sh --bootstrap-server my-kafka:9092 --topic address --property "parse.key=true" --property "key.separator=:"
-//        >wonyoung:Seoul
-//        >somin:Newyork
-//        >wonyoung:Seoul
-//        >somin:Newyork
+// >wonyoung:Seoul
+// >somin:Newyork
+// >wonyoung:Seoul
+// >somin:Newyork
