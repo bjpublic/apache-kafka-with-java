@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.22'
 }
 
 group 'com.pipeline'
@@ -14,10 +15,14 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.apache.kafka:connect-api:2.5.0'
     implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.9.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 jar {
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
+}
+kotlin {
+    jvmToolchain(11)
 }

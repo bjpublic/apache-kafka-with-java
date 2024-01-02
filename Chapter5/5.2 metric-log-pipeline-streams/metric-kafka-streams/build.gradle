@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.22'
 }
 
 group 'org.example'
@@ -15,4 +16,8 @@ repositories {
 dependencies {
     implementation 'org.apache.kafka:kafka-streams:2.5.0'
     implementation 'com.google.code.gson:gson:2.8.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+kotlin {
+    jvmToolchain(11)
 }
